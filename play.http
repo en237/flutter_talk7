@@ -1,0 +1,11 @@
+# Variables
+@api = https://jsonplaceholder.typicode.com
+@accept = application/json
+
+# Albums
+## list
+GET {{api}}/albums HTTP/1.1
+
+
+
+Accept: {{accept}}
