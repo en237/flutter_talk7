@@ -37,6 +37,12 @@ class IndexPage extends StatelessWidget {
               },
               child: Text("raw http call"),
             ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) => RawHttpAndModelPage()));
+              },
+              child: Text("raw http call and deserialization"),
+            ),
           ],
         ),
       ),
