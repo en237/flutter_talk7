@@ -23,11 +23,11 @@ abstract class RestClient {
 
   /// update album
   @PUT("/albums/{id}")
-  Future<Album> updateAlbum(@Path() String id, @Body() Album album);
+  Future<Album> updateAlbum(@Path() int id, @Body() Album album);
 
   /// delete album
   @DELETE("/albums/{id}")
-  Future<void> deleteAlbum(@Path() String id);
+  Future<void> deleteAlbum(@Path() int id);
 
   /// create album
   @POST("/albums")
@@ -41,11 +41,11 @@ abstract class RestClient {
 
   /// update photo
   @PUT("/albums/{id}")
-  Future<Album> updatePhoto(@Path() String id, @Body() Photo photo);
+  Future<Album> updatePhoto(@Path() int id, @Body() Photo photo);
 
   /// delete photo
   @DELETE("/albums/{id}")
-  Future<void> deletePhoto(@Path() String id);
+  Future<void> deletePhoto(@Path() int id);
 
   /// create photo
   @POST("/albums")

@@ -49,6 +49,12 @@ class IndexPage extends StatelessWidget {
               },
               child: Text("raw http call with service"),
             ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) => AlbumListPage()));
+              },
+              child: Text("Album List"),
+            ),
           ],
         ),
       ),

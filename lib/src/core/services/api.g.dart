@@ -22,8 +22,16 @@ class _RestClient implements RestClient {
     final queryParameters = <String, dynamic>{};
     final _data = <String, dynamic>{};
     final _result = await _dio.request<List<dynamic>>('albums',
-        queryParameters: queryParameters, options: RequestOptions(method: 'GET', headers: <String, dynamic>{}, extra: _extra, baseUrl: baseUrl), data: _data);
-    var value = _result.data.map((dynamic i) => Album.fromJson(i as Map<String, dynamic>)).toList();
+        queryParameters: queryParameters,
+        options: RequestOptions(
+            method: 'GET',
+            headers: <String, dynamic>{},
+            extra: _extra,
+            baseUrl: baseUrl),
+        data: _data);
+    var value = _result.data
+        .map((dynamic i) => Album.fromJson(i as Map<String, dynamic>))
+        .toList();
     return value;
   }
 
@@ -34,7 +42,13 @@ class _RestClient implements RestClient {
     final queryParameters = <String, dynamic>{};
     final _data = <String, dynamic>{};
     final _result = await _dio.request<Map<String, dynamic>>('albums/$id',
-        queryParameters: queryParameters, options: RequestOptions(method: 'GET', headers: <String, dynamic>{}, extra: _extra, baseUrl: baseUrl), data: _data);
+        queryParameters: queryParameters,
+        options: RequestOptions(
+            method: 'GET',
+            headers: <String, dynamic>{},
+            extra: _extra,
+            baseUrl: baseUrl),
+        data: _data);
     final value = Album.fromJson(_result.data);
     return value;
   }
@@ -46,8 +60,16 @@ class _RestClient implements RestClient {
     final queryParameters = <String, dynamic>{};
     final _data = <String, dynamic>{};
     final _result = await _dio.request<List<dynamic>>('albums/$id/photos',
-        queryParameters: queryParameters, options: RequestOptions(method: 'GET', headers: <String, dynamic>{}, extra: _extra, baseUrl: baseUrl), data: _data);
-    var value = _result.data.map((dynamic i) => Photo.fromJson(i as Map<String, dynamic>)).toList();
+        queryParameters: queryParameters,
+        options: RequestOptions(
+            method: 'GET',
+            headers: <String, dynamic>{},
+            extra: _extra,
+            baseUrl: baseUrl),
+        data: _data);
+    var value = _result.data
+        .map((dynamic i) => Photo.fromJson(i as Map<String, dynamic>))
+        .toList();
     return value;
   }
 
@@ -60,7 +82,13 @@ class _RestClient implements RestClient {
     final _data = <String, dynamic>{};
     _data.addAll(album?.toJson() ?? <String, dynamic>{});
     final _result = await _dio.request<Map<String, dynamic>>('/albums/$id',
-        queryParameters: queryParameters, options: RequestOptions(method: 'PUT', headers: <String, dynamic>{}, extra: _extra, baseUrl: baseUrl), data: _data);
+        queryParameters: queryParameters,
+        options: RequestOptions(
+            method: 'PUT',
+            headers: <String, dynamic>{},
+            extra: _extra,
+            baseUrl: baseUrl),
+        data: _data);
     final value = Album.fromJson(_result.data);
     return value;
   }
@@ -73,7 +101,11 @@ class _RestClient implements RestClient {
     final _data = <String, dynamic>{};
     await _dio.request<void>('/albums/$id',
         queryParameters: queryParameters,
-        options: RequestOptions(method: 'DELETE', headers: <String, dynamic>{}, extra: _extra, baseUrl: baseUrl),
+        options: RequestOptions(
+            method: 'DELETE',
+            headers: <String, dynamic>{},
+            extra: _extra,
+            baseUrl: baseUrl),
         data: _data);
     return null;
   }
@@ -86,7 +118,13 @@ class _RestClient implements RestClient {
     final _data = <String, dynamic>{};
     _data.addAll(album?.toJson() ?? <String, dynamic>{});
     final _result = await _dio.request<Map<String, dynamic>>('/albums',
-        queryParameters: queryParameters, options: RequestOptions(method: 'POST', headers: <String, dynamic>{}, extra: _extra, baseUrl: baseUrl), data: _data);
+        queryParameters: queryParameters,
+        options: RequestOptions(
+            method: 'POST',
+            headers: <String, dynamic>{},
+            extra: _extra,
+            baseUrl: baseUrl),
+        data: _data);
     final value = Album.fromJson(_result.data);
     return value;
   }
@@ -97,8 +135,16 @@ class _RestClient implements RestClient {
     final queryParameters = <String, dynamic>{};
     final _data = <String, dynamic>{};
     final _result = await _dio.request<List<dynamic>>('photos',
-        queryParameters: queryParameters, options: RequestOptions(method: 'GET', headers: <String, dynamic>{}, extra: _extra, baseUrl: baseUrl), data: _data);
-    var value = _result.data.map((dynamic i) => Photo.fromJson(i as Map<String, dynamic>)).toList();
+        queryParameters: queryParameters,
+        options: RequestOptions(
+            method: 'GET',
+            headers: <String, dynamic>{},
+            extra: _extra,
+            baseUrl: baseUrl),
+        data: _data);
+    var value = _result.data
+        .map((dynamic i) => Photo.fromJson(i as Map<String, dynamic>))
+        .toList();
     return value;
   }
 
@@ -109,7 +155,13 @@ class _RestClient implements RestClient {
     final queryParameters = <String, dynamic>{};
     final _data = <String, dynamic>{};
     final _result = await _dio.request<Map<String, dynamic>>('photos/$id',
-        queryParameters: queryParameters, options: RequestOptions(method: 'GET', headers: <String, dynamic>{}, extra: _extra, baseUrl: baseUrl), data: _data);
+        queryParameters: queryParameters,
+        options: RequestOptions(
+            method: 'GET',
+            headers: <String, dynamic>{},
+            extra: _extra,
+            baseUrl: baseUrl),
+        data: _data);
     final value = Photo.fromJson(_result.data);
     return value;
   }
@@ -123,7 +175,13 @@ class _RestClient implements RestClient {
     final _data = <String, dynamic>{};
     _data.addAll(photo?.toJson() ?? <String, dynamic>{});
     final _result = await _dio.request<Map<String, dynamic>>('/albums/$id',
-        queryParameters: queryParameters, options: RequestOptions(method: 'PUT', headers: <String, dynamic>{}, extra: _extra, baseUrl: baseUrl), data: _data);
+        queryParameters: queryParameters,
+        options: RequestOptions(
+            method: 'PUT',
+            headers: <String, dynamic>{},
+            extra: _extra,
+            baseUrl: baseUrl),
+        data: _data);
     final value = Album.fromJson(_result.data);
     return value;
   }
@@ -136,7 +194,11 @@ class _RestClient implements RestClient {
     final _data = <String, dynamic>{};
     await _dio.request<void>('/albums/$id',
         queryParameters: queryParameters,
-        options: RequestOptions(method: 'DELETE', headers: <String, dynamic>{}, extra: _extra, baseUrl: baseUrl),
+        options: RequestOptions(
+            method: 'DELETE',
+            headers: <String, dynamic>{},
+            extra: _extra,
+            baseUrl: baseUrl),
         data: _data);
     return null;
   }
@@ -149,7 +211,13 @@ class _RestClient implements RestClient {
     final _data = <String, dynamic>{};
     _data.addAll(photo?.toJson() ?? <String, dynamic>{});
     final _result = await _dio.request<Map<String, dynamic>>('/albums',
-        queryParameters: queryParameters, options: RequestOptions(method: 'POST', headers: <String, dynamic>{}, extra: _extra, baseUrl: baseUrl), data: _data);
+        queryParameters: queryParameters,
+        options: RequestOptions(
+            method: 'POST',
+            headers: <String, dynamic>{},
+            extra: _extra,
+            baseUrl: baseUrl),
+        data: _data);
     final value = Photo.fromJson(_result.data);
     return value;
   }
@@ -160,8 +228,16 @@ class _RestClient implements RestClient {
     final queryParameters = <String, dynamic>{};
     final _data = <String, dynamic>{};
     final _result = await _dio.request<List<dynamic>>('users',
-        queryParameters: queryParameters, options: RequestOptions(method: 'GET', headers: <String, dynamic>{}, extra: _extra, baseUrl: baseUrl), data: _data);
-    var value = _result.data.map((dynamic i) => User.fromJson(i as Map<String, dynamic>)).toList();
+        queryParameters: queryParameters,
+        options: RequestOptions(
+            method: 'GET',
+            headers: <String, dynamic>{},
+            extra: _extra,
+            baseUrl: baseUrl),
+        data: _data);
+    var value = _result.data
+        .map((dynamic i) => User.fromJson(i as Map<String, dynamic>))
+        .toList();
     return value;
   }
 
@@ -172,7 +248,13 @@ class _RestClient implements RestClient {
     final queryParameters = <String, dynamic>{};
     final _data = <String, dynamic>{};
     final _result = await _dio.request<Map<String, dynamic>>('users/$id',
-        queryParameters: queryParameters, options: RequestOptions(method: 'GET', headers: <String, dynamic>{}, extra: _extra, baseUrl: baseUrl), data: _data);
+        queryParameters: queryParameters,
+        options: RequestOptions(
+            method: 'GET',
+            headers: <String, dynamic>{},
+            extra: _extra,
+            baseUrl: baseUrl),
+        data: _data);
     final value = User.fromJson(_result.data);
     return value;
   }
