@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_talk7/src/core/models/models.dart';
 import 'package:flutter_talk7/src/core/services/services.dart';
+import 'package:flutter_talk7/src/ui/ui.dart';
 
 class AlbumViewPage extends StatelessWidget {
   final Album album;
@@ -42,7 +43,22 @@ class AlbumViewPage extends StatelessWidget {
                   return GridView.count(
                     crossAxisCount: 3,
                     childAspectRatio: 1,
-                    children: photos.map((e) => Image.network(e.thumbnailUrl)).toList(),
+                    children: photos
+                        .map(
+                          (e) => InkWell(
+                            onTap: () => Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => PhotoViewPage(
+                                          photoUrl: e.url,
+                                          title: e.title,
+                                        ))),
+                            child: Image.network(
+                              e.thumbnailUrl,
+                            ),
+                          ),
+                        )
+                        .toList(),
                   );
                 }
                 if (snapshot.hasError) {
