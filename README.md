@@ -4,11 +4,11 @@ A new Flutter project.
 
 ## Goal
 
-Build a Flutter application to consume A REST API and demonstrate the implementation
-Raw Implementation
-Provider Implementation
-REST API Server
+- Build a Flutter application to consume A REST API and demonstrate the implementation
+- Raw Implementation
+- Provider Implementation [TODO]
 
+## REST API Server 
 - https://jsonplaceholder.typicode.com
 - endpoints
   - albums
@@ -39,7 +39,7 @@ REST API Server
 
 - API PODO classes
 - API Interface
-- Providers
+- Providers [TODO]
 
 #### UI
 
