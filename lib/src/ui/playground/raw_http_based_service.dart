@@ -13,7 +13,7 @@ class RawHttpServicePage extends StatelessWidget {
     // int albumId = 101;// uncomment to trigger an unexpected status code
     return Scaffold(
         appBar: AppBar(
-          title: Text("Raw HTTP And Deserialization"),
+          title: Text("HTTP With Raw Service"),
         ),
         body: Column(
           children: <Widget>[
