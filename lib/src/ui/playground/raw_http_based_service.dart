@@ -46,9 +46,13 @@ class RawHttpServicePage extends StatelessWidget {
                       ),
                     );
                   } else if (snapshot.hasError) {
-                    return Text("${snapshot.error}");
+                    return Center(
+                      child: Text("${snapshot.error}"),
+                    );
                   }
-                  return CircularProgressIndicator();
+                  return Center(
+                    child: CircularProgressIndicator(),
+                  );
                 },
               ),
             ),
