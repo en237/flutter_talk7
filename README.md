@@ -2,15 +2,56 @@
 
 A new Flutter project.
 
-## Getting Started
+## Goal
 
-This project is a starting point for a Flutter application.
+Build a Flutter application to consume A REST API and demonstrate the implementation
+Raw Implementation
+Provider Implementation
+REST API Server
 
-A few resources to get you started if this is your first Flutter project:
+- https://jsonplaceholder.typicode.com
+- endpoints
+  - albums
+  - photos
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+## Resources
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- https://javiercbk.github.io/json_to_dart/
+- https://flutter.dev/docs/development/data-and-backend/networking
+- https://flutter.dev/docs/development/data-and-backend/json
+- https://flutter.dev/docs/cookbook/networking/fetch-data
+- https://flutter.dev/docs/development/tools/devtools/network
+- https://medium.com/swlh/how-to-do-networking-like-a-pro-in-flutter-7e2612103cb5
+- https://www.raywenderlich.com/5896601-flutter-networking-tutorial-getting-started
+- https://medium.com/mindful-engineering/retrofit-the-easiest-way-to-call-rest-apis-is-flutter-fe55d1e7c5c2
+
+## Implementation
+
+### Scaffolding
+
+#### Plugins/Packages
+
+- Retrofit
+- Dio
+- Build Runner
+
+#### Classes
+
+- API PODO classes
+- API Interface
+- Providers
+
+#### UI
+
+- UI
+- UI Binding
+
+## Extra
+
+- Network inspector
+- Error Handling
+- Http Headers
+- Authentication
+- JWT Refresh
+- File/Image Upload
+- Other
